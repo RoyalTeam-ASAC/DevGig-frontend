@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
@@ -31,7 +31,7 @@ class FindTalent extends Component {
     dataSubmitHandler = async () => {
      
   
-      const axiosResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/findJobs`)
+      const axiosResponse = await axios.get(`http://localhost:8000/findJobs`)
       console.log(axiosResponse)
 
       this.setState({
@@ -62,11 +62,6 @@ class FindTalent extends Component {
           <Header/>
      <JobModal show={this.state.show} hide={this.hideModal} showData={this.state.jobData} />
 
- 
-
-
-
-       
 
 
 <Carousel>     
