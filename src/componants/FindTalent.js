@@ -31,7 +31,7 @@ class FindTalent extends Component {
     console.log('this.state.data', this.state.data);
   }
   dataSubmitHandler = async () => {
-    const axiosResponse = await axios.get(`http://devgig-backend.herokuapp.com/findJobs`)
+    const axiosResponse = await axios.get(`https://devgig-backend.herokuapp.com/findJobs`)
     console.log(axiosResponse)
     this.setState({
       jobData: axiosResponse.data,

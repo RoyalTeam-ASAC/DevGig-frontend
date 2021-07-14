@@ -94,7 +94,7 @@ export class Updateform extends Component {
     componentDidMount = async () => {
         let email = 'softwaredohanow@gmail.com'
         console.log('email', email)
-        const url = `http://devgig-backend.herokuapp.com/userfreelance?email=${email}`;
+        const url = `https://devgig-backend.herokuapp.com/userfreelance?email=${email}`;
         axios.get(url).then(response => {
             console.log('previous data', response);
             this.setState({
@@ -114,7 +114,7 @@ export class Updateform extends Component {
                 websiteUrl: this.state.newWeb,
                 // userEmail: this.props.auth0.user.email
             }
-            const url = `http://devgig-backend.herokuapp.com/userfreelance`;
+            const url = `https://devgig-backend.herokuapp.com/userfreelance`;
             axios.post(url, reqBody).then(response => {
                 console.log('new data', response.data);
                 console.log('reqBody', reqBody)
@@ -138,7 +138,7 @@ export class Updateform extends Component {
         const qureyParams = {
             email: 'softwaredohanow@gmail.com'
         }
-        await axios.delete(`http://devgig-backend.herokuapp.com/userfreelance/${free_idx}`, { params: qureyParams })
+        await axios.delete(`https://devgig-backend.herokuapp.com/userfreelance/${free_idx}`, { params: qureyParams })
     }
     //  updateFreelance=async(e,free_idx)=>{
     //      e.preventDefault();

@@ -132,7 +132,7 @@ export class Profile extends Component {
             websiteUrl: this.state.newWeb,
             email: 'softwaredohanow@gmail.com'
         }
-        const updateFreelanceUser = await axios.put(`http://devgig-backend.herokuapp.com/userfreelance/${this.state.index}`, bodydata)
+        const updateFreelanceUser = await axios.put(`https://devgig-backend.herokuapp.com/userfreelance/${this.state.index}`, bodydata)
         this.setState({
             dataformBack: updateFreelanceUser.data
         })
@@ -143,7 +143,7 @@ export class Profile extends Component {
 
         let email = 'softwaredohanow@gmail.com'
         console.log('email', email)
-        const url = `http://devgig-backend.herokuapp.com/userfreelance?email=softwaredohanow@gmail.com`;
+        const url = `https://devgig-backend.herokuapp.com/userfreelance?email=softwaredohanow@gmail.com`;
         axios.get(url).then(response => {
             console.log('previous data', response);
             this.setState({
@@ -165,7 +165,7 @@ export class Profile extends Component {
             }
 
 
-            const url = `http://devgig-backend.herokuapp.com/userfreelance`;
+            const url = `https://devgig-backend.herokuapp.com/userfreelance`;
 
             axios.post(url, reqBody).then(response => {
                 console.log('new data', response.data);
@@ -198,7 +198,7 @@ export class Profile extends Component {
         const qureyParams = {
             email: 'softwaredohanow@gmail.com'
         }
-        await axios.delete(`http://devgig-backend.herokuapp.com/userfreelance/${free_idx}`, { params: qureyParams })
+        await axios.delete(`https://devgig-backend.herokuapp.com/userfreelance/${free_idx}`, { params: qureyParams })
 
 
 
