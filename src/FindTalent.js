@@ -5,12 +5,13 @@ import Carousel from 'react-bootstrap/Carousel'
 import JobModal from './JobModal'
 import Header from './componants/Header'
 import axios from 'axios';
-import Footer from './componants/Footer';
-// import Findtalentcard from './componants/Findtalentcard';
+import Newfooter from './componants/Newfooter';
+
 import Profilecard from './componants/Profilecard';
 import Updateform from './componants/Updateform';
 import { withAuth0 } from '@auth0/auth0-react';
 import UpdateFormModal from './UpdateFormModal';
+import './FindTalent.css'
 class FindTalent extends Component {
   constructor(props) {
     super(props);
@@ -18,16 +19,16 @@ class FindTalent extends Component {
       show: false,
       jobData: [],
       //fromProfile
-      dataformBack:[],
+      dataformBack: [],
       // email: "munther.abdlrahman@gmail.com",
       name: '',
-      skills:'',
-      bio:'',
-      phone:'',
+      skills: '',
+      bio: '',
+      phone: '',
       websiteUrl: '',
-      freelanceData:[]
+      freelanceData: []
     }
-    console.log('this.state.data',this.state.data);
+    console.log('this.state.data', this.state.data);
   }
   dataSubmitHandler = async () => {
     const axiosResponse = await axios.get(`http://localhost:3001/findJobs`)
@@ -60,38 +61,24 @@ class FindTalent extends Component {
       <div>
         <Header />
         <JobModal show={this.state.show} hide={this.hideModal} showData={this.state.jobData} />
-        <Updateform/>
-        
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://image.freepik.com/free-photo/top-view-person-writing-laptop-with-copy-space_23-2148708035.jpg"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <Button style={{
-                position: 'relative',
-                bottom: '300px',
-                left: '300px'
-              }} variant="outline-success" size="lg" onClick={this.showModal} > Find a Job</Button>{' '}
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-        <br></br>
-        <br></br>
-        <h1 style={{ textAlign: 'center' }}>Our Freelancers</h1>
-        <h1></h1>
+        <img src='/freelance1.png' alt='freelancemain' className='freelancemain'/>
+          <h1 className='talenth1'>Find A Talent And Hire A Pro</h1>
+          <h3 className='talenth3'>Search for job offers and get your chance with us </h3>
+        <Button className='findjob' variant="outline-secondary" size="lg" onClick={this.showModal} > Find a Job</Button>{' '}
+        <div className='linefree'></div>
+        <h1 className='freelance1'>Our Freelancers</h1>
+        <div className='freelancecard'>
         {
-           this.state.freelanceData.map((element, index) => {
+          this.state.freelanceData.map((element, index) => {
             return <>
-            <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
-            <Updateform/>
-            <UpdateFormModal nameOnChange={this.nameOnChange} jobTitleChange={this.jobTitleChange} descriptionChange={this.descriptionChange} jobTitle={this.state.newJobTitle} description={this.state.newDescription} UpdateJob={this.UpdateJob} />
+              <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
+              {/* <UpdateFormModal nameOnChange={this.nameOnChange} jobTitleChange={this.jobTitleChange} descriptionChange={this.descriptionChange} jobTitle={this.state.newJobTitle} description={this.state.newDescription} UpdateJob={this.UpdateJob} /> */}
             </>
-        })
-      }
-        <Footer />
+          })
+        }
+        <Updateform/>
+        </div>
+        <Newfooter/>
       </div>
     )
   }

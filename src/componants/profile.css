@@ -1,34 +1,149 @@
+.profilemain{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60%;
+    z-index: -1;
+}
+
+.profileh1{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #F2A16F;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.nameM{
+    position: relative;
+    top: -260px;
+    font-family:Arial, Helvetica, sans-serif;
+    height: 50px;
+    margin-left: 100px;
+    color: #434F4D;
+
+} 
 #firstH{
     float:left;
 }
 
 .ImgH{
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    float: right;
+    position: relative;
+    top: -430px;
+    left: 580px;
 }
-.nameM{
-    border:2px solid #000;
-    border-radius: 20px  ;
-    width: 400px;
-    height: 100px;
-    background-color:#ccc;
-
-} 
-
+.linep{
+    width:900px;
+    height: 10px;
+    background-color: #434f4d;
+    position: relative;
+    top: -300px;
+    /* margin-bottom: 100px; */
+}
+/*...................form........*/
+.sectionform{
+    position: relative;
+    top: -200px;
+}
 #formP{
-    border:2px solid #000;
-    border-radius: 60px;
-    background-color: #f2f2f2;
+    margin-left: 150px;
+    border:2px solid #F2A16F;
+    border-radius: 20px;
+    background-color: #fdfdfd;
     padding: 20px;
+    width: 1000px;
 }
-#fname{
-    width: 50%;
+.h1Form{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #F2A16F;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.labelform{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #434f4d;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center
+}
+.fname{
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid #434f4d;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: #c5c9c8;
+}
+.h3Form{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #434f4d;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.labelform1{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #434f4d;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center
+}
+.fname1{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  text-align: center;
+  border: 1px solid #434f4d;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #c5c9c8;
+}
+
+.formButton{
+    margin-left: 350px;
+    width: 250px;
+    height: 40px;
+    background-color: #F2A16F;
+    border: 2px solid #434f4d;
+    border-radius: 10px;
+}
+.linep2{
+    width:900px;
+    height: 10px;
+    background-color: #434f4d;
+    position: relative;
+    top: -100px;
+    left: 449px;
+}
+/*...........button...........*/
+.deletform{
+    position: relative;
+    top: -600px;
+    left: 800px;
+    width: 200px;
+    background-color: #F2A16F;
+}
+.chooseform{
+    position: relative;
+    top: -700px;
+    left: 600px;
+    width: 200px;
+    background-color: #F2A16F;
+}
+.updateForm{
+    position: relative;
+    top: -230px;
+    left: 400px;
+    width: 500px;
+}
+
+/*.......modal........*/
+.formModal{
+    width: 500px;
+    height: 300xpx;
 }

@@ -6,6 +6,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import { Button } from 'react-bootstrap';
 import Modelformforupdate from './Modelformforupdate';
 import Header from './Header';
+import Newfooter from './Newfooter';
 
 
 export class Profile extends Component {
@@ -206,76 +207,62 @@ export class Profile extends Component {
     render() {
         return (
             <>
-
                 <Header />
-
-                <Modelformforupdate nameONchange={this.nameONchange} SkillsONchange={this.SkillsONchange} BioONchange={this.BioONchange} phoneONchange={this.phoneONchange} websiteONchange={this.websiteONchange}
-                    skills={this.state.newSkills} bio={this.state.newBio} phone={this.state.newPhone} websiteUrl={this.state.newWeb} updateFreelance={this.updateFreelance} />
-                <h1 >User Info</h1>
+                <img src='/profile 1.png' alt='profile' className='profilemain'/>
+                <h1 className='profileh1'>User Information</h1>
                 {
                     this.props.auth0.isAuthenticated &&
                     <>
                         <section>
-                            <h3 class="nameM" >
+                            <h3 className="nameM" >
                                 Name:{this.props.auth0.user.name}
                             </h3>
-                            <h3 id="firstH" class="nameM" >
+                            <h3 class="nameM" >
                                 Email:{this.props.auth0.user.email}
                             </h3>
-                            <img class="ImgH" src="{this.props.auth0.user.picture}" alt="person" />
+                            <img class="ImgH" src={this.props.auth0.user.picture} alt="person" />
                         </section>
                     </>
                 }
-
-
-                <br />
-                <br />
-                <br />
-                <br />
-                <section>
+                <div className='linep'></div>
+                <section className="sectionform">
                     <form id="formP">
-                        <h3>Apply For Promotion</h3>
-                        <label for="fname">Name</label><br />
-                        <input type="text" id="fname" name="firstname" placeholder="Your name:" onChange={(e) => this.nameONchange(e)} />
+                        <h3 className='h1Form'>Apply For Promotion</h3>
+                        <label for="fname" className='labelform'>Name</label><br />
+                        <input type="text" className="fname" name="firstname" placeholder="Your name:" onChange={(e) => this.nameONchange(e)} />
                         <br />
-                        <label for="skill">Skills</label><br />
-                        <input type="text" id="fname" placeholder="Your Skills:" onChange={(e) => this.SkillsONchange(e)} />
+                        <label for="skill" className='labelform'>Skills</label><br />
+                        <input type="text" className="fname" placeholder="Your Skills:" onChange={(e) => this.SkillsONchange(e)} />
                         <br />
-                        <label for="bio">Bio</label><br />
-                        <input type="text" id="fname" placeholder="Bio:" onChange={(e) => this.BioONchange(e)} />
-                        <br />
-                        <br />
+                        <label for="bio" className='labelform'>Bio</label><br />
+                        <input type="text" className="fname" placeholder="Bio:" onChange={(e) => this.BioONchange(e)} />
                         <br />
                         <br />
                         <br />
-                        <h3>Work Samples</h3>
+                        <h3 className='h3Form'>Contact Information</h3><br />
+                        <label for="fname" className='labelform1'>Phone</label><br />
+                        <input type="text" className="fname1" name="firstname" placeholder="Phone #" onChange={(e) => this.phoneONchange(e)} />
+                        <br />
+                        <label for="fname" className='labelform1'>Website Url</label><br />
+                        <input required aria-required="true" type="text" className="fname1" name="firstname" placeholder="Website Url" onChange={(e) => this.websiteONchange(e)} />
                         <br />
                         <br />
-                        <br />
-                        <h3>Contact Info</h3><br />
-                        <br />
-                        <label for="fname">Phone</label><br />
-                        <input type="text" id="fname" name="firstname" placeholder="Phone #" onChange={(e) => this.phoneONchange(e)} />
-                        <br />
-                        <label for="fname">Website Url</label><br />
-                        <input required aria-required="true" type="text" id="fname" name="firstname" placeholder="Website Url" onChange={(e) => this.websiteONchange(e)} />
-                        <br />
-                        <br />
-                        <button onClick={(e) => this.postFreelance(e)} >Premote yourself</button>
+                        <button onClick={(e) => this.postFreelance(e)} className="formButton">Premote yourself</button>
                     </form>
-
                 </section>
+                <div className='linep2'></div>
                 {
                     this.state.dataformBack.map((element, index) => {
                         return <>
                             <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
-                            <Button variant="danger" onClick={() => this.deleteFreelance(index)}>Delete</Button>
-                            <Button variant="warning" onClick={() => this.showUpdateForm(index)} class='button'> Freelance User Selector</Button>
+                            <Button variant="outline-secondary" onClick={() => this.deleteFreelance(index)} className='deletform'>Delete</Button>
+                            <Button variant="outline-secondary"  onClick={() => this.showUpdateForm(index)} class='button' className='chooseform'> Freelance User Selector</Button>
                         </>
                     })
                 }
-
-
+                <Modelformforupdate nameONchange={this.nameONchange} SkillsONchange={this.SkillsONchange} BioONchange={this.BioONchange} phoneONchange={this.phoneONchange} websiteONchange={this.websiteONchange}
+                    skills={this.state.newSkills} bio={this.state.newBio} phone={this.state.newPhone} websiteUrl={this.state.newWeb} updateFreelance={this.updateFreelance} />
+                    <Newfooter/>
             </>
         )
     }

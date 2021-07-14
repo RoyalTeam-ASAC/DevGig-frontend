@@ -27,7 +27,7 @@ img {
    top: -40px;
 
 }
-.icon{
+.icon3{
     position: relative;
     top: 10px;
     left: 50px;
@@ -59,7 +59,8 @@ img {
     font-weight: bold;
     
 }
-.formmain{     position: relative;
+.formmain{     
+    position: relative;
     top: 100px;
     background-color: #F2A16F;
     color: #475351;
@@ -106,11 +107,7 @@ img {
     margin-left: 500px;
     
 }
-.cardgroup{
-    /* margin-left: 200px; */
-    /* width:900px; */
-    /* padding-left: 100px; */
-}
+
 .card1{
     display: inline-block;
     position: relative;

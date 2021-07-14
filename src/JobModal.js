@@ -23,14 +23,14 @@ class JobModal extends Component {
             {this.props.showData.map(item => {
 
               return <CardDeck>
-                <Card>
-                  <Card.Img variant="top" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" />
+                <Card style={{backgroundColor:'whitesmoke',border:'2px solid black' ,marginBottom:'30px'}}>
+                  <Card.Img variant="top" src="/freelance2.png" style={{width:'300px'}}/>
                   <Card.Body>
-                    <Card.Title>{item.title}</Card.Title>
-                    <Card.Text>
+                    <Card.Title style={{position:'absolute',top:'50px',left:'350px'}}>{item.title}</Card.Title>
+                    <Card.Text style={{position:'absolute',top:'100px',left:'350px' ,fontSize:'20px'}}>
                       Company Name: {item.company_name} <br></br>
                       Job Type: {item.job_type}<br></br>
-                      <Button href={item.url}>Apply</Button>
+                      <Button href={item.url} variant="secondary" style={{position:'absolute',top:'120px',width:'300px'}}>Apply</Button>
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>

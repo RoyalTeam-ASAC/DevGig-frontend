@@ -1,0 +1,23 @@
+.modal{
+    width: 600px;
+    overflow-y: hidden
+}
+.formModal{
+    overflow-y: hidden
+
+}
+.modalBody{
+    overflow-y: hidden
+
+}
+.modalform{
+    overflow-y: hidden
+
+}
+
+.updatebutton{
+    /* margin-left: 300px; */
+    display: inline-block;
+    width: 300px;
+    margin-top: 20px;
+}

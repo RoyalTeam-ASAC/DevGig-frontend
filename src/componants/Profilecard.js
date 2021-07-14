@@ -1,31 +1,25 @@
 import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
+import Card from 'react-bootstrap/Card';
+import './Profilecard.css'
 export class Profilecard extends Component {
     render() {
         return (
             <div>
-                <CardGroup>
-                    <Card border="primary" style={{ width: '30px', display: 'inline-block', marginBottom: '200px' }}>
-                        <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" style={{ width: '200px', marginTop: '35px', marginLeft: '20px' }} />
-                        <Card.Body style={{ height: '400px' }}>
-                            <Card.Title style={{ marginTop: '60px' }}>Name:{this.props.name} </Card.Title>
-                            <Card.Title style={{ marginTop: '60px' }}>Bio:{this.props.bio}</Card.Title>
-                            <Card.Title style={{ position: "absolute", top: '30px', left: '300px' }}>Skills:{this.props.skills}</Card.Title>
-                            {/* <Card.Title style={{position:"absolute",top:'100px',left:'300px'}}>Work Samples:</Card.Title> */}
-                            {/* <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" style={{width:'200px', marginTop:'20px',marginLeft:'0px',position:"absolute",top:'150px',left:'300px'}} />
-                            <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" style={{width:'200px', marginTop:'20px',marginLeft:'200px',position:"absolute",top:'150px',left:'400px'}}/>
-                             <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" style={{width:'200px', marginTop:'20px',marginLeft:'400px',position:"absolute",top:'150px',left:'500px'}}/> */}
-                            <Card.Title style={{ position: "absolute", top: '400px', left: '300px' }}>Contact Info</Card.Title>
-                            <Card.Title style={{ position: "absolute", top: '500px', left: '300px' }}>Phone:{this.props.phone}</Card.Title>
-                            <Card.Title style={{ position: "absolute", top: '500px', left: '700px' }}>WebsiteUrl:{this.props.websiteUrl}</Card.Title>
+                    <Card style={{ width: '800px', display: 'inline-block', marginBottom: '200px',marginLeft:'250px',border:'solid 2px black' }}>
+                        <Card.Img variant="top" src="/profile2.png" style={{ width: '500px', marginTop: '35px',border:'3px solide black' }} />
+                        <Card.Body style={{ height: '250px' }}>
+                            <Card.Title style={{ marginTop: '60px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold' }}>Name:{this.props.name} </Card.Title>
+                            <Card.Title style={{position: "absolute", top: '500px', left: '300px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold' }}>Bio:{this.props.bio}</Card.Title>
+                            <Card.Title style={{ position: "absolute", top: '580px', left: '20px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold' }}>Skills:{this.props.skills}</Card.Title>
+                            <Card.Title style={{ position: "absolute", top: '580px', left: '300px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold', fontSize:'30px' }}className='cardinfo'>Contact Information</Card.Title>
+                            <Card.Title style={{ position: "absolute", top: '650px', left: '200px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold' }}>Phone:{this.props.phone}</Card.Title>
+                            <Card.Title style={{ position: "absolute", top: '650px', left: '500px',fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold' }}>WebsiteUrl:{this.props.websiteUrl}</Card.Title>
                             <Card.Text>
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
                         </Card.Footer>
                     </Card>
-                </CardGroup>
             </div>
         )
     }

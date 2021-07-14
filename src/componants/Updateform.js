@@ -163,7 +163,7 @@ export class Updateform extends Component {
         const { user, isAuthenticated } = this.props.auth0;
         return (
             <div>
-                {isAuthenticated ? <Button variant="warning" onClick={() => { this.handleModal() }}>Promote yourself</Button> : ''}
+                {/* {isAuthenticated ? <Button variant="warning" onClick={() => { this.handleModal() }}>Promote yourself</Button> : ''} */}
                 <Modal show={this.state.show} onHide={() => this.handleModal()}>
                     <Modal.Header closeButton>{this.props.newNameBook}</Modal.Header>
                     <Modal.Body>
@@ -185,18 +185,6 @@ export class Updateform extends Component {
                             <h3>Work Samples</h3>
                             <br />
                             <br />
-                            {/* <label for="bio">Your Website A :-  </label>
-                        <input required aria-required="true"id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeA(e)} />
-                        <br />
-                        <label for="bio">Your Website B :- </label>
-                        <input required aria-required="true" id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeB(e)} />
-                        <br />
-                        <label for="bio">Your Website C :-  </label>
-                        <input required aria-required="true" id="fname" class="input" id="email" name="E-mail" placeholder='Your GitHub...' onChange={(e) => this.openPrimary(e)} />
-                        <br />
-                        <label class="label" for="url">Upload Url image for best project :-</label>
-                        <input   class="input" id="url_txt" name="Url" type="url"  placeholder='Your Img Url...' required onChange={(e) => { this.imageONchange(e) }} />
-                        <br /> */}
                             <br />
                             <h3>Contact Info</h3><br />
                             <br />
@@ -207,7 +195,7 @@ export class Updateform extends Component {
                             <input required aria-required="true" type="text" id="fname" name="firstname" placeholder="Website Url" onChange={(e) => this.websiteONchange(e)} />
                             <br />
                             <br />
-                            <button onClick={(e) => this.postFreelance(e)} >Premote yourself</button>
+                            {/* <button onClick={(e) => this.postFreelance(e)} >Premote yourself</button> */}
                         </form>
                     </Modal.Body>
                 </Modal>
@@ -215,7 +203,7 @@ export class Updateform extends Component {
                     this.state.dataformBack.map((element, index) => {
                         return <>
                             <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
-                            {isAuthenticated ? <Button variant="danger" onClick={() => this.deleteFreelance(index)}>Delete</Button> : ''}
+                            {/* {isAuthenticated ? <Button variant="danger" onClick={() => this.deleteFreelance(index)}>Delete</Button> : ''} */}
                             {/* <Modelformforupdate key={index} id={index} free_idx={index}  nameONchange={this.nameONchange} SkillsONchange={this.SkillsONchange} BioONchange={this.BioONchange} phoneONchange={this.phoneONchange} websiteONchange={this.websiteONchange}  updateFreelance={this.updateFreelance}
                         newName={element.name} newSkills={element.skills} newBio={element.bio} newPhone={element.phone} newWeb={element.websiteUrl}   /> */}
                         </>

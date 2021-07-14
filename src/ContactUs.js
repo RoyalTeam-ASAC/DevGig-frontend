@@ -5,8 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
 import Header from './componants/Header'
 import './ContactUs.css';
-import Footer from './componants/Footer'
-
+import Newfooter from './componants/Newfooter'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -31,9 +30,9 @@ class ContactUs extends Component {
           </h2>
 
           <h2> Social Media Links <br></br>
-            <FontAwesomeIcon icon={faFacebook} className="icon" size="2x" />
-            <FontAwesomeIcon icon={faInstagram} className="icon" size="2x" />
-            <FontAwesomeIcon icon={faTwitter} className="icon" size="2x" />
+            <FontAwesomeIcon icon={faFacebook} className="icon3" size="2x" />
+            <FontAwesomeIcon icon={faInstagram} className="icon3" size="2x" />
+            <FontAwesomeIcon icon={faTwitter} className="icon3" size="2x" />
 
 
           </h2>
@@ -113,7 +112,7 @@ class ContactUs extends Component {
             {/* </CardGroup> */}
             {/* </Col> */}
           </div>
-          <Footer />
+          <Newfooter />
         </div>
         )
   }

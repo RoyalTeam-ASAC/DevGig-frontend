@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from './Header'
+import Newheader from './Newheader'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button'
@@ -8,7 +8,7 @@ import UpdateFormModal from '../UpdateFormModal'
 import axios from 'axios'
 import { withAuth0 } from '@auth0/auth0-react';
 import './PostWork.css';
-import Footer from './Footer'
+import Newfooter from './Newfooter'
 
 class PostWork extends Component {
 
@@ -155,7 +155,7 @@ class PostWork extends Component {
     const { user, isAuthenticated } = this.props.auth0;
     return (
       <div >
-        <Header />
+        <Newheader />
         <img src='/postwork1.png' alt='headerimg' className='headerImage' />
         <img src='/postwork2.png' alt='headerimg' className='image1' />
         <h1 className='headline'>POST YOUR WORK IN OUR COMMUNITY</h1>
@@ -189,7 +189,7 @@ class PostWork extends Component {
             </CardGroup>
           })
         }
-        <Footer/>
+        <Newfooter/>
       </div>
     )
   }

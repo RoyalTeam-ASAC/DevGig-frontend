@@ -1,0 +1,10 @@
+.cardp{
+    width: '30px';
+    display: 'inline-block';
+    margin-bottom: '200px'
+}
+.cardimage{
+    width: '200px';
+    margin-top: '35px';
+    margin-left: '20px'
+}
