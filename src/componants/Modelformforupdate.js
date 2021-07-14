@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, Button } from 'react-bootstrap';
-import axios from 'axios';
+
 import './Modelform.css'
 export class Modelformforupdate extends Component {
     constructor(props) {

@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { Button, Modal } from "react-bootstrap"
+import {  Modal } from "react-bootstrap"
 import Profilecard from './Profilecard';
 import axios from 'axios';
-import userEvent from '@testing-library/user-event';
-import { faThList } from '@fortawesome/free-solid-svg-icons';
+
 
 import { withAuth0 } from '@auth0/auth0-react';
 export class Updateform extends Component {
@@ -93,9 +92,9 @@ export class Updateform extends Component {
         this.setState({ show: !this.state.show })
     }
     componentDidMount = async () => {
-        let email = 'razanalamleh@gmail.com'
+        let email = 'softwaredohanow@gmail.com'
         console.log('email', email)
-        const url = `http://localhost:3001/userfreelance?email=${email}`;
+        const url = `http://devgig-backend.herokuapp.com/userfreelance?email=${email}`;
         axios.get(url).then(response => {
             console.log('previous data', response);
             this.setState({
@@ -107,7 +106,7 @@ export class Updateform extends Component {
         (e).preventDefault();
         try {
             const reqBody = {
-                email: "razanalamleh@gmail.com",
+                email: "softwaredohanow@gmail.com",
                 name: this.state.newName,
                 skills: this.state.newSkills,
                 bio: this.state.newBio,
@@ -115,7 +114,7 @@ export class Updateform extends Component {
                 websiteUrl: this.state.newWeb,
                 // userEmail: this.props.auth0.user.email
             }
-            const url = `http://localhost:3001/userfreelance`;
+            const url = `http://devgig-backend.herokuapp.com/userfreelance`;
             axios.post(url, reqBody).then(response => {
                 console.log('new data', response.data);
                 console.log('reqBody', reqBody)
@@ -137,9 +136,9 @@ export class Updateform extends Component {
         })
         //  const{user}=this.props.auth0;
         const qureyParams = {
-            email: 'razanalamleh@gmail.com'
+            email: 'softwaredohanow@gmail.com'
         }
-        await axios.delete(`http://localhost:3001/userfreelance/${free_idx}`, { params: qureyParams })
+        await axios.delete(`http://devgig-backend.herokuapp.com/userfreelance/${free_idx}`, { params: qureyParams })
     }
     //  updateFreelance=async(e,free_idx)=>{
     //      e.preventDefault();
@@ -160,7 +159,7 @@ export class Updateform extends Component {
     //      })
     //  }
     render() {
-        const { user, isAuthenticated } = this.props.auth0;
+       
         return (
             <div>
                 {/* {isAuthenticated ? <Button variant="warning" onClick={() => { this.handleModal() }}>Promote yourself</Button> : ''} */}

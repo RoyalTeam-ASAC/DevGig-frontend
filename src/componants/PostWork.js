@@ -65,7 +65,7 @@ class PostWork extends Component {
   };
 
   componentDidMount = async () => {
-    await axios.get(`http://localhost:3001/jobs?email=razanalamleh@gmail.com`).then(response => {
+    await axios.get(`http://devgig-backend.herokuapp.com/jobs?email=softwaredohanow@gmail.com`).then(response => {
       this.setState({
         jobsData: response.data,
         mounted: true
@@ -92,7 +92,7 @@ class PostWork extends Component {
         description: this.state.newDescription,
       }
 
-      const url = `http://localhost:3001/jobs`;
+      const url = `http://devgig-backend.herokuapp.com/jobs`;
       axios.post(url, reqBody).then(response => {
         console.log('new data', response.data);
         console.log('reqBody', reqBody)
@@ -116,9 +116,9 @@ class PostWork extends Component {
     })
 
     const queryParams = {
-      email: 'razanalamleh@gmail.com'
+      email: 'softwaredohanow@gmail.com'
     }
-    await axios.delete(`http://localhost:3001/jobs/${index}`, { params: queryParams })
+    await axios.delete(`http://devgig-backend.herokuapp.com/jobs/${index}`, { params: queryParams })
   };
 
 
@@ -142,9 +142,9 @@ class PostWork extends Component {
       companyName: this.state.newCompanyName,
       jobTitle: this.state.newJobTitle,
       description: this.state.newDescription,
-      email: 'razanalamleh@gmail.com'
+      email: 'softwaredohanow@gmail.com'
     }
-    const updateJob = await axios.put(`http://localhost:3001/jobs/${this.state.index}`, bodydata)
+    const updateJob = await axios.put(`http://devgig-backend.herokuapp.com/jobs/${this.state.index}`, bodydata)
     this.setState({
       jobsData: updateJob.data
     })
@@ -152,7 +152,7 @@ class PostWork extends Component {
 
 
   render() {
-    const { user, isAuthenticated } = this.props.auth0;
+    const { isAuthenticated } = this.props.auth0;
     return (
       <div >
         <Newheader />

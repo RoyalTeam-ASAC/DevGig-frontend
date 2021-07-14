@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
-
+import Carousel from 'react-bootstrap/Carousel'
 import JobModal from './JobModal'
 import Header from './componants/Header'
 import axios from 'axios';
@@ -10,7 +10,7 @@ import Newfooter from './componants/Newfooter';
 import Profilecard from './componants/Profilecard';
 import Updateform from './componants/Updateform';
 import { withAuth0 } from '@auth0/auth0-react';
-
+import UpdateFormModal from './UpdateFormModal';
 import './FindTalent.css'
 class FindTalent extends Component {
   constructor(props) {
