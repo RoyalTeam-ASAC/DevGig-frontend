@@ -8,6 +8,7 @@
     top: 0px;
     width: 75%;
     z-index: -1;
+    height: 150%;
    
 }
 .talenth1{
@@ -38,7 +39,8 @@
     width:1000px;
     height: 10px;
     background-color: #434f4d;
-    margin-top: 350px;
+    margin-top: 0px;
+    margin-left: 340px;
 }
 .freelance1{
     font-family:Arial, Helvetica, sans-serif;
