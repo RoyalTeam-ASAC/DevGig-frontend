@@ -142,6 +142,7 @@ export class Profile extends Component {
     componentDidMount = async () => {
 
         let email = 'softwaredohanow@gmail.com'
+        //this.props.auth0.user.email
         console.log('email', email)
         const url = `https://devgig-backend.herokuapp.com/userfreelance?email=softwaredohanow@gmail.com`;
         axios.get(url).then(response => {
@@ -157,6 +158,8 @@ export class Profile extends Component {
         try {
             const reqBody = {
                 email: "softwaredohanow@gmail.com",
+                        //this.props.auth0.user.email
+
                 name: this.state.newName,
                 skills: this.state.newSkills,
                 bio: this.state.newBio,
@@ -197,6 +200,8 @@ export class Profile extends Component {
         //  const{user}=this.props.auth0;
         const qureyParams = {
             email: 'softwaredohanow@gmail.com'
+                    //this.props.auth0.user.email
+
         }
         await axios.delete(`https://devgig-backend.herokuapp.com/userfreelance/${free_idx}`, { params: qureyParams })
 
